@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block start %}
+<div class=container >
+
+ {% include "image.html" %}
+  <h1>In these small templateProject we are going to learn tamplate tags,variables</h1>
+  <p>Accessing Variable lucky_number in index.html file</p>
+  <h3>Your lucky number:{{lucky_number}} </h3>
+
+  <h2>Looping through list of items using template tags we will see the results in command prompt in CLI </h2>
+  {{vegtables}}
+  <ol>
+    {% for veg in vegtables %}
+    <li>{{veg}}</li>
+    {% endfor %}
+  </ol>
+  
+  {% if person_age >= 18 %}
+  <h3>person can vote</h3>
+  {% else %}
+  <h3>person can't vote</h3>
+  {% endif %}
+
+  {{ student_data }}
+  <ol>
+    {% for students in student_data  %}
+    <li>
+      {{ students }}
+    </li>
+    {% endfor %}
+  </ol>
+
+  <h3>Student Data Infromation</h3>
+  <p>s.no | Name | Age | Study</p>
+  {% for student in student_data %}
+  <p> {{forloop.counter}} | {{student.name}} | {{student.age}} | {{student.Study}} </p>
+
+  {% if student.age >= 18 %}
+  <h4>
+    He can Vote and He can work anywhere
+  </h4>
+  {% else %}
+  <h4>
+    He can't vote and can't work because he is child
+  </h4>
+  {% endif %}
+  
+  {% endfor %}
+{% endblock %}
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates Practice</title>
+</head>
+<body>
+  <h1>Rendering Html files using return render request method</h1>
+  <h3>This is index Page🏠</h3>
+
+  <h2>Adding contact and about page links uisng a(anchor tag)</h2>
+  <a href="/contact">Contact</a>
+  
+  <a href="/about">About</a>
+  <a href="{% url 'dynamic_url' 101 %}">Dynamic_url</a>
+  <br><br>
+
+  <h2>Exploring namespace url connections</h2>
+  <a href="{% url 'about' %}">About</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  
+  <h2>Adding Class Based HomeView to these template</h2>
+  <a href="{% url 'home' %}">HomeView</a>
+</body>
+</html>

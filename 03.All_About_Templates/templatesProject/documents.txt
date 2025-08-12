@@ -1,0 +1,22 @@
+django-admin startproject templateProject
+cd templateProject
+py manage.py startapp templateApp
+add app in templateProject settings.py file
+
+write View Logic and url
+create templates folder in templateApp
+create index.html and write logics accessing variables using context method
+looping through list in views--> output in CLI
+looping through list of vegtables in index.html file using for loop and endfor to end loop this are called blocks
+we are going to learn how to use conditions now in index.html file
+
+
+## Template Inheritance
+we use template Inheritance to reduce same code of html files using {% extends 'base.html' %}
+we want to write any specific code we use blocks that are to start: {% block start %} and to end block we use endblock : {% endblock %}. we can write between in these block anything
+
+
+## DB connection using Mysql
+1.create DB in mysql and connect with anme and password and check using 
+1.py manage.py makemigrations(it will create file in migration folder)
+2.py manage.py migrate(migrate all models to mysql)
